@@ -1,209 +1,57 @@
-<head>
-  <style>
+<!doctype html>
 
-body {
-  background: #295f2d;
-  font-family: helvetica;
-}
+<html lang="en">
 
-h1 {
-  padding: 15px;
-  text-align: center;
-  color: #ffe67c;
-  font-style: oblique;
-  font-size: 48px;
-}
+  <head>
+    <meta charset="utf-8">
+    <title>Food for Me</title>
+    <link rel="stylesheet" type="text/css" href="css/superfood.css">
+  </head>
 
-button {
-  cursor: pointer;;
-}
+  <body>
 
-#order-container {
-  display: flex;
-  justify-content: flex-end;
-
-}
-
-#order-button {
-  width: 10%;
-  height: 50px;
-  margin-top: 10px;
-  border: 1px solid #ffe67c;
-  border-radius: 10px;
-  background: #295f2d;
-  color: #ffe67c;
-}
-
-.search-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-#search-bar {
-  width: 80%;
-  height: 40px;
-  font-size: 20px;
-}
-
-.container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.card {
-  flex: none;
-  margin-top: 40px;
-  padding: 20px;
-  border-radius: 10px;
-  background: #ffe67c;
-}
-
-img, .food-about {
-  max-width: 350px;
-  height: auto;
-  text-align: justify;
-}
-
-.food-title, .food-about {
-  margin-top: 30px;
-  line-height: 1.5;
-}
-
-.food-title {
-  font-weight: bold;
-  text-align: center;
-  font-style: oblique;
-}
-
-.food-button {
-  width: 100%;
-  margin-top: 10px;
-  border: 1px solid #295f2d;
-  background: #ffe67c;
-  color: #295f2d;
-}
-
-.food-about {
-  display: none;
-}
-
-.bg-modal {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-
-#order-modal {
-  width: 40%;
-  height: 90%;
-  background-color: #ffe67c;
-  border-radius: 10px;
-  text-align: center;
-  padding: 15px;
-  position: relative;
-}
-
-.basket-img {
-  border-radius: 300px;
-  width: 100px;
-  height: 100px;
-}
-
-.text-input {
-  width: 70%;
-  height: 8%;
-  display: block;
-  margin: 15px auto;
-  border-radius: 5px;
-  padding: 3px;
-}
-
-.close {
-  position: absolute;
-  top: 0;
-  right: 14px;
-  font-size: 42px;
-  transform: rotate(45deg);
-  cursor: pointer;
-  color: #295f2d;
-}
-
-.submit-order-btn {
-  width: 70%;
-  height: 8%;
-  border: 1px solid #ffe67c;
-  border-radius: 10px;
-  background: #295f2d;
-  color: #ffe67c;
-  cursor: pointer;
-  margin: 20px;
-}
-
-.food-item {
-  display: inline;
-}
-
-#blanket-selection {
-  display: none;
-}
-
-p, selection {
-  display: inline;
-  font-style: normal;
-}
-
-.blanket-question, #blanket-selection {
-  font-size: 14px;
-  font-style: italic;
-}
-
-  </style>
-</head>
-<body>
-  <div id="order-container">
-    <button id="order-button">Order a basket</button>
-  </div>
+    <!-- Order link button -->
+    <div class="order-container">
+      <button id="order-button">Order a basket</button>
+    </div>
 
     <h1>Food for Me</h1>
+
+    <!-- Search bar -->
     <div class="search-container">
       <input id="search-bar" type="text"></input>
     </div>
-<div class="container">
-    <div class="card">
-      <div><img src="img/goji.jpg"></div>
-      <div class="food-title">Goji berry</div>
-      <button class="food-button">More</button>
-      <div class="food-about">
-         Since the early 21st century, the dried fruit has been marketed in the
-         Western world as a health food, amidst scientifically unsupported
-         claims regarding such benefits. In the wake of those claims, dried and
-         fresh goji berries were included in many snack foods and food
-         supplements, such as granola bars, yogurt, tea blends, fruit juices
-         and juice concentrates, whole fruit purées, and dried pulp flour.
-       </div>
-     </div>
 
-     <div class="card">
-       <div><img src="img/chia.jpg"></div>
-       <div class="food-title">Chia seed</div>
-       <button class="food-button">More</button>
-       <div class="food-about">
-         Dried chia seeds contain 6% water, 42% carbohydrates, 16% protein, and
-         31% fat. In a 100-gram amount, chia seeds are a rich source (20% or
-         more of the Daily Value, DV) of the B vitamins, thiamin and niacin
-         (54% and 59% DV, respectively), and a moderate source of riboflavin
-         (14% DV) and folate (12% DV). Several dietary minerals are in rich
-         content, including calcium, iron, magnesium, manganese, phosphorus,
-         and zinc (all more than 20% DV; see table).The fatty acids of chia seed
-         oil are mainly unsaturated, with linoleic acid (17–26% of total fat)
-         and linolenic acid (50–57%) as the major fats.
+    <!-- Caeds with food items information -->
+    <div class="card-container">
+      <div class="card">
+        <div><img src="img/goji.jpg"></div>
+        <div class="food-title">Goji berry</div>
+        <button class="food-button">More</button>
+        <div class="food-about">
+           Since the early 21st century, the dried fruit has been marketed in the
+           Western world as a health food, amidst scientifically unsupported
+           claims regarding such benefits. In the wake of those claims, dried and
+           fresh goji berries were included in many snack foods and food
+           supplements, such as granola bars, yogurt, tea blends, fruit juices
+           and juice concentrates, whole fruit purées, and dried pulp flour.
+         </div>
+      </div>
+
+      <div class="card">
+        <div><img src="img/chia.jpg"></div>
+        <div class="food-title">Chia seed</div>
+        <button class="food-button">More</button>
+        <div class="food-about">
+           Dried chia seeds contain 6% water, 42% carbohydrates, 16% protein, and
+           31% fat. In a 100-gram amount, chia seeds are a rich source (20% or
+           more of the Daily Value, DV) of the B vitamins, thiamin and niacin
+           (54% and 59% DV, respectively), and a moderate source of riboflavin
+           (14% DV) and folate (12% DV). Several dietary minerals are in rich
+           content, including calcium, iron, magnesium, manganese, phosphorus,
+           and zinc (all more than 20% DV; see table).The fatty acids of chia seed
+           oil are mainly unsaturated, with linoleic acid (17–26% of total fat)
+           and linolenic acid (50–57%) as the major fats.
         </div>
       </div>
 
@@ -212,31 +60,31 @@ p, selection {
         <div class="food-title">Blueberries</div>
         <button class="food-button">More</button>
         <div class="food-about">
-          Blueberries consist of 14% carbohydrates, 0.7% protein, 0.3% fat and
-          84% water. They contain only negligible amounts of
-          micronutrients, with moderate levels (relative to respective Daily
-          Values) (DV) of the essential dietary mineral manganese, vitamin C,
-          vitamin K and dietary fiber. Generally, nutrient contents
-          of blueberries are a low percentage of the DV. One serving
-          provides a relatively low caloric value of 57 kcal per 100 g serving
-          and glycemic load score of 6 out of 100 per day.
-         </div>
-       </div>
+            Blueberries consist of 14% carbohydrates, 0.7% protein, 0.3% fat and
+            84% water. They contain only negligible amounts of
+            micronutrients, with moderate levels (relative to respective Daily
+            Values) (DV) of the essential dietary mineral manganese, vitamin C,
+            vitamin K and dietary fiber. Generally, nutrient contents
+            of blueberries are a low percentage of the DV. One serving
+            provides a relatively low caloric value of 57 kcal per 100 g serving
+            and glycemic load score of 6 out of 100 per day.
+        </div>
+      </div>
 
-       <div class="card">
-         <div><img src="img/avocado.jpg"></div>
-         <div class="food-title">Avocado</div>
-         <button class="food-button">More</button>
-         <div class="food-about">
-           Blueberries consist of 14% carbohydrates, 0.7% protein, 0.3% fat and
-           84% water  . They contain only negligible amounts of
-           micronutrients, with moderate levels (relative to respective Daily
-           Values) (DV) of the essential dietary mineral manganese, vitamin C,
-           vitamin K and dietary fiber. Generally, nutrient contents
-           of blueberries are a low percentage of the DV . One serving
-           provides a relatively low caloric value of 57 kcal per 100 g serving
-           and glycemic load score of 6 out of 100 per day.
-          </div>
+      <div class="card">
+        <div><img src="img/avocado.jpg"></div>
+        <div class="food-title">Avocado</div>
+        <button class="food-button">More</button>
+        <div class="food-about">
+             Blueberries consist of 14% carbohydrates, 0.7% protein, 0.3% fat and
+             84% water  . They contain only negligible amounts of
+             micronutrients, with moderate levels (relative to respective Daily
+             Values) (DV) of the essential dietary mineral manganese, vitamin C,
+             vitamin K and dietary fiber. Generally, nutrient contents
+             of blueberries are a low percentage of the DV . One serving
+             provides a relatively low caloric value of 57 kcal per 100 g serving
+             and glycemic load score of 6 out of 100 per day.
+        </div>
       </div>
 
       <div class="card">
@@ -244,229 +92,153 @@ p, selection {
         <div class="food-title">Mango</div>
         <button class="food-button">More</button>
         <div class="food-about">
-          The energy value per 100 g (3.5 oz) serving of the common mango is
-          250 kJ (60 kcal), and that of the apple mango is slightly higher
-          (330 kJ (79 kcal) per 100 g). Fresh mango contains a variety of
-          nutrients (right table), but only vitamin C and folate are in
-          significant amounts of the Daily Value as 44% and 11%, respectively.
-          Numerous phytochemicals are present in mango peel and pulp, such as
-          the triterpene, lupeol which is under basic research for its potential
-          Mango peel pigments under study include carotenoids, such as the
-          biological effects.
-          provitamin A compound, beta-carotene, lutein and alpha-carotene,
-          and polyphenols, such as quercetin, kaempferol, gallic acid, caffeic
-          acid, catechins and tannins. Mango contains a unique xanthonoid called
-          mangiferin.
+            The energy value per 100 g (3.5 oz) serving of the common mango is
+            250 kJ (60 kcal), and that of the apple mango is slightly higher
+            (330 kJ (79 kcal) per 100 g). Fresh mango contains a variety of
+            nutrients (right table), but only vitamin C and folate are in
+            significant amounts of the Daily Value as 44% and 11%, respectively.
+            Numerous phytochemicals are present in mango peel and pulp, such as
+            the triterpene, lupeol which is under basic research for its potential
+            Mango peel pigments under study include carotenoids, such as the
+            biological effects.
+            provitamin A compound, beta-carotene, lutein and alpha-carotene,
+            and polyphenols, such as quercetin, kaempferol, gallic acid, caffeic
+            acid, catechins and tannins. Mango contains a unique xanthonoid called
+            mangiferin.
+          </div>
+       </div>
+
+       <div class="card">
+         <div><img src="img/coconut.jpg"></div>
+         <div class="food-title">Coconut</div>
+         <button class="food-button">More</button>
+         <div class="food-about">
+           Per 100-gram serving with 354 calories, raw coconut meat supplies a
+           high amount of total fat (33 grams), especially saturated fat (89% of
+           total fat), moderate content of carbohydrates (15 grams), and protein
+           (3 grams). Micronutrients in significant content (more than 10% of the
+           Daily Value) include the dietary minerals, manganese, copper, iron,
+           phosphorus, selenium, and zinc .
          </div>
+       </div>
+
+      <div class="card">
+        <div><img src="img/strawberry.jpg"></div>
+        <div class="food-title">Strawberry</div>
+        <button class="food-button">More</button>
+        <div class="food-about">
+          One serving (100 g; see Table) of strawberries contains approximately 33
+          kilocalories, is an excellent source of vitamin C, a good source of
+          manganese, and provides several other vitamins and dietary minerals in
+          lesser amounts. Strawberries contain a modest amount of essential
+          unsaturated fatty acids in the achene (seed) oil. Garden strawberries
+          contain the dimeric ellagitannin agrimoniin which is an isomer of
+          sanguiin H-6. Other polyphenols present include flavonoids, such as
+          anthocyanins, flavanols, flavonols and phenolic acids, such as
+          hydroxybenzoic acid and hydroxycinnamic acid. Strawberries contain
+          fisetin and possess higher levels of this flavonoid than other fruits.
+        </div>
      </div>
 
      <div class="card">
-       <div><img src="img/coconut.jpg"></div>
-       <div class="food-title">Coconut</div>
+       <div><img src="img/rice.jpg"></div>
+       <div class="food-title">Brown rice</div>
        <button class="food-button">More</button>
        <div class="food-about">
-         Per 100-gram serving with 354 calories, raw coconut meat supplies a
-         high amount of total fat (33 grams), especially saturated fat (89% of
-         total fat), moderate content of carbohydrates (15 grams), and protein
-         (3 grams). Micronutrients in significant content (more than 10% of the
-         Daily Value) include the dietary minerals, manganese, copper, iron,
-         phosphorus, selenium, and zinc .
+         Brown rice and white rice have similar amounts of calories and
+         carbohydrates. Brown rice is a whole grain and a good source of
+         magnesium, phosphorus, selenium, thiamine, niacin, vitamin B6, and
+         manganese, and is high in fiber. White rice, unlike brown rice, has the
+         bran and germ removed, and therefore has different nutritional content.
+         Several vitamins and dietary minerals are lost in this removal and the
+         subsequent polishing process. Among these are: oil in the bran, which is
+         removed along with the bran layer, dietary fiber, small amounts of fatty
+         acids, and magnesium. A part of these missing nutrients, such as vitamins
+         B1 and B3, and iron, are sometimes added back into the white rice.
         </div>
     </div>
 
     <div class="card">
-      <div><img src="img/strawberry.jpg"></div>
-      <div class="food-title">Strawberry</div>
+      <div><img src="img/oat.jpg"></div>
+      <div class="food-title">Oat</div>
       <button class="food-button">More</button>
       <div class="food-about">
-        One serving (100 g; see Table) of strawberries contains approximately 33
-        kilocalories, is an excellent source of vitamin C, a good source of
-        manganese, and provides several other vitamins and dietary minerals in
-        lesser amounts. Strawberries contain a modest amount of essential
-        unsaturated fatty acids in the achene (seed) oil. Garden strawberries
-        contain the dimeric ellagitannin agrimoniin which is an isomer of
-        sanguiin H-6. Other polyphenols present include flavonoids, such as
-        anthocyanins, flavanols, flavonols and phenolic acids, such as
-        hydroxybenzoic acid and hydroxycinnamic acid. Strawberries contain
-        fisetin and possess higher levels of this flavonoid than other fruits.
+        Oats are generally considered healthful due to their rich content of
+        several essential nutrients. In a 100 gram serving, oats provide
+        389 kilocalories (1,630 kJ) and are an excellent source (20% or more of
+        the Daily Value, DV) of protein (34% DV), dietary fiber (44% DV), several
+        B vitamins and numerous dietary minerals, especially manganese (233% DV).
+        Oats are 66% carbohydrates, including 11% dietary fiber and 4%
+        beta-glucans, 7% fat and 17% protein.
+        The established property of their cholesterol-lowering effects has led to
+        acceptance of oats as a health food.
        </div>
    </div>
-
-   <div class="card">
-     <div><img src="img/rice.jpg"></div>
-     <div class="food-title">Brown rice</div>
-     <button class="food-button">More</button>
-     <div class="food-about">
-       Brown rice and white rice have similar amounts of calories and
-       carbohydrates. Brown rice is a whole grain and a good source of
-       magnesium, phosphorus, selenium, thiamine, niacin, vitamin B6, and
-       manganese, and is high in fiber. White rice, unlike brown rice, has the
-       bran and germ removed, and therefore has different nutritional content.
-       Several vitamins and dietary minerals are lost in this removal and the
-       subsequent polishing process. Among these are: oil in the bran, which is
-       removed along with the bran layer, dietary fiber, small amounts of fatty
-       acids, and magnesium. A part of these missing nutrients, such as vitamins
-       B1 and B3, and iron, are sometimes added back into the white rice.
-      </div>
-  </div>
-
-  <div class="card">
-    <div><img src="img/oat.jpg"></div>
-    <div class="food-title">Oat</div>
-    <button class="food-button">More</button>
-    <div class="food-about">
-      Oats are generally considered healthful due to their rich content of
-      several essential nutrients. In a 100 gram serving, oats provide
-      389 kilocalories (1,630 kJ) and are an excellent source (20% or more of
-      the Daily Value, DV) of protein (34% DV), dietary fiber (44% DV), several
-      B vitamins and numerous dietary minerals, especially manganese (233% DV).
-      Oats are 66% carbohydrates, including 11% dietary fiber and 4%
-      beta-glucans, 7% fat and 17% protein.
-      The established property of their cholesterol-lowering effects has led to
-      acceptance of oats as a health food.
-     </div>
- </div>
 
   <div class="card">
     <div><img src="img/almonds.jpg"></div>
     <div class="food-title">Almonds</div>
     <button class="food-button">More</button>
     <div class="food-about">
-      Almonds are 4% water, 22% carbohydrates, 21% protein, and 50% fat. In a
-      100 gram reference amount, almonds supply 579 calories. The almond is a
-      nutritionally dense food, providing a rich source (20% or more of the
-      Daily Value, DV) of the B vitamins riboflavin and niacin, vitamin E, and
-      the essential minerals calcium, copper, iron, magnesium, manganese,
-      phosphorus, and zinc. Almonds are a moderate source (10–19% DV) of the B
-      vitamins thiamine, vitamin B6, and folate, choline, and the essential
-      mineral potassium. They also contain substantial dietary fiber, the
-      monounsaturated fat, oleic acid, and the polyunsaturated fat, linoleic
-      acid. Typical of nuts and seeds, almonds are a source of phytosterols such
-      as beta-sitosterol, stigmasterol, campesterol, sitostanol, and campestanol.
-     </div>
- </div>
-</div>
+        Almonds are 4% water, 22% carbohydrates, 21% protein, and 50% fat. In a
+        100 gram reference amount, almonds supply 579 calories. The almond is a
+        nutritionally dense food, providing a rich source (20% or more of the
+        Daily Value, DV) of the B vitamins riboflavin and niacin, vitamin E, and
+        the essential minerals calcium, copper, iron, magnesium, manganese,
+        phosphorus, and zinc. Almonds are a moderate source (10–19% DV) of the B
+        vitamins thiamine, vitamin B6, and folate, choline, and the essential
+        mineral potassium. They also contain substantial dietary fiber, the
+        monounsaturated fat, oleic acid, and the polyunsaturated fat, linoleic
+        acid. Typical of nuts and seeds, almonds are a source of phytosterols such
+        as beta-sitosterol, stigmasterol, campesterol, sitostanol, and campestanol.
+    </div>
+   </div>
 
-<div class="bg-modal">
-  <div id="order-modal">
-    <div class="close">+</div>
-
-    <img class="basket-img" src="img/basket.png">
-
-    <form id="order-form">
-      <input class="text-input" type="text" placeholder="First name">
-      <input class="text-input" type="text" placeholder="Last name">
-      <input class="text-input" type="text" placeholder="Address">
-      <input class="text-input" type="text" placeholder="Phone">
-      <input class="text-input" type="text" placeholder="Email">
-
-      <div>
-        <p class="blanket-question"> I wan't a picnic blancket: </p>
-        <input type='checkbox' id="blanket-checkbox">
-      </div>
-      <br>
-
-      <div id="blanket-selection">
-        <p>Color:</p>
-        <select>
-          <option value="red">red</option>
-          <option value="yellow">yellow</option>
-          <option value="blue">blue</option>
-        </select> <br>
-      </div>
-
-      <button class="submit-order-btn" type="submit" value="Save">Order</button>
-    <form>
   </div>
-</div>
 
-  <script>
-  var cards = document.getElementsByClassName('card');
-  var foodList = [];
+ <!-- A popup window with a form for ordering items. -->
+  <div class="bg-modal">
 
-  for (var i = 0; i < cards.length; i++) {
-    var foodTitle = cards[i].querySelector('.food-title');
-    var foodName = foodTitle.innerHTML.toLowerCase();
-    foodList.push(foodName);
-    var button = cards[i].querySelector('.food-button');
-    button.addEventListener('click', function(event) {
-      var currentButton = event.target;
-      var currentCard = currentButton.parentNode;
-      var currentAbout = currentCard.querySelector('.food-about');
+    <div class="order-modal">
 
-      if (currentButton.innerHTML == 'More') {
-        currentAbout.style.display = 'Block';
-        currentButton.innerHTML = 'Hide';
-      } else {
-        currentAbout.style.display = 'None';
-        currentButton.innerHTML = 'More';
-      }
-    })
-  }
 
-  var searchBar = document.getElementById('search-bar');
-  searchBar.addEventListener('keyup', function(event){
-    var text = searchBar.value;
-    for (var i = 0; i < cards.length; i++) {
-      if (foodList[i].indexOf(text) < 0) {
-        cards[i].style.display = 'None';
-      } else {
-        cards[i].style.display = 'Block';
-      }
-    }
-  });
+      <div class="close">+</div>
 
-  document.getElementById('order-button').addEventListener('click',
-    function() {
-      document.querySelector('.bg-modal').style.display = 'flex';
-    });
+      <img class="basket-img" src="img/basket.png">
 
-  document.querySelector('.close').addEventListener('click',
-    function() {
-      document.querySelector('.bg-modal').style.display = 'none';
-    })
+      <form id="order-form">
+        <input class="text-input" type="text" placeholder="First name">
+        <input class="text-input" type="text" placeholder="Last name">
+        <input class="text-input" type="text" placeholder="Address">
+        <input class="text-input" type="text" placeholder="Phone">
+        <input class="text-input" type="text" placeholder="Email">
 
-    var checkbox = document.getElementById('blanket-checkbox');
-    var sectionDiv = document.getElementById('blanket-selection');
-    checkbox.addEventListener('change', function(event) {
-        if (checkbox.checked == true) {
-          sectionDiv.style.display = 'Block';
-        } else {
-          sectionDiv.style.display = 'None';
-        }
-    });
+        <div>
+          <p class="blanket-question"> I wan't a picnic blanket: </p>
+          <input type='checkbox' id="blanket-checkbox">
+        </div>
 
-    var orderForm = document.getElementById('order-form');
-    orderForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      var firstName = orderForm.elements[0].value;
-      var lastName = orderForm.elements[1].value;
-      var address = orderForm.elements[2].value;
-      var phone = orderForm.elements[3].value;
-      var email = orderForm.elements[4].value;
-      var wantsBlanket = orderForm.elements[5].checked;
 
-      if (firstName == '' || lastName == '' || address == '' || phone == ''
-        || email == '') {
-        alert('All fields must be populated!');
-        return;
-        }
-      if (wantsBlanket) {
-        var blanketText = orderForm.elements[6].value + ' blanket';
-      } else {
-        var blanketText = 'No blanket';
-      }
+        <div id="blanket-selection">
 
-      alert('The order was successfull \n' +
-        'Your basket will be delivered to your address whihin two days \n' +
-        'Order info: \n' +
-        firstName + '\n' +
-        lastName + '\n' +
-        address + '\n' +
-        phone + '\n' +
-        email + '\n' +
-        blanketText + '\n')
-    })
+          <p>Color:</p>
+          <select>
+            <option value="red">red</option>
+            <option value="yellow">yellow</option>
+            <option value="blue">blue</option>
+          </select>
+          
+        </div>
 
-  </script>
-</body>
+          <button class="submit-order-btn" type="submit" value="Save">
+            Order
+          </button>
+      <form>
+
+    </div>
+  </div>
+
+  <script src="js/superfood.js"></script>
+
+  </body>
+<html>

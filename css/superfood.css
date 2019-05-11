@@ -1,0 +1,162 @@
+
+body {
+  background: #295f2d;
+  font-family: helvetica;
+}
+
+h1 {
+  padding: 15px;
+  text-align: center;
+  color: #ffe67c;
+  font-style: oblique;
+  font-size: 48px;
+}
+
+button {
+  cursor: pointer;;
+}
+
+.order-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#order-button {
+  width: 11%;
+  height: 50px;
+  margin-top: 10px;
+  border: 1px solid #ffe67c;
+  border-radius: 10px;
+  background: #295f2d;
+  color: #ffe67c;
+  font-size: 18px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#search-bar {
+  width: 80%;
+  height: 40px;
+  font-size: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.card {
+  flex: none;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffe67c;
+}
+
+img, .food-about {
+  max-width: 350px;
+  height: auto;
+  text-align: justify;
+}
+
+.food-title, .food-about {
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+.food-title {
+  font-weight: bold;
+  text-align: center;
+  font-style: oblique;
+}
+
+.food-button {
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  border: 1px solid #295f2d;
+  border-radius: 10px;
+  background: #ffe67c;
+  color: #295f2d;
+}
+
+.food-about {
+  display: none;
+}
+
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.order-modal {
+  min-width: 500px;
+  max-height: auto;
+  background-color: #ffe67c;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
+.basket-img {
+  border-radius: 300px;
+  width: 100px;
+  height: 100px;
+}
+
+.text-input {
+  width: 70%;
+  height: 8%;
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  color: #295f2d;
+}
+
+#blanket-selection {
+  display: none;
+  margin-top: 15px;
+}
+
+.blanket-question {
+  font-size: 14px;
+  font-style: italic;
+}
+
+p, selection {
+  display: inline;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.submit-order-btn {
+  width: 70%;
+  height: 28px;
+  border: 1px solid #ffe67c;
+  border-radius: 10px;
+  background: #295f2d;
+  color: #ffe67c;
+  cursor: pointer;
+  margin-top: 20px;
+}
